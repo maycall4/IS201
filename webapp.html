@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vacation Generator</title>
+  <style >
+    nav {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #ffffffcc;
+  color: #333;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a:hover {
+  background-color: #ff6f61;
+  color: white;
+  transform: translateY(-2px);
+}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    #vacationDisplay {
+      font-size: 1.8rem;
+      color: #333;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      margin: 1.5rem 0;
+      min-height: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    #generateBtn {
+      padding: 0.7rem 1.5rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff6f61;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    #generateBtn:hover {
+      background-color: #ff3e3e;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+<nav>
+<a href="scratch.html">Scratch Page</a>
+<a href="index.html">Home Page</a>
+<a href="webapp.html">This Page</a>
+</nav>
+
+  <h1>🌴 Vacation Generator 🌍</h1>
+  <div id="vacationDisplay">Click the button to get your dream vacation!</div>
+  <button id="generateBtn">Generate Vacation</button>
+
+  <footer>
+    Made by Mayley ☀️ 
+  </footer>
+
+  <script>
+    const vacations = [
+    "Bali, Indonesia 🏝️ – Relax on white sandy beaches and explore temples",
+    "Kyoto, Japan 🏯 – Enjoy cherry blossoms and traditional tea ceremonies",
+    "Paris, France 🗼 – Stroll by the Eiffel Tower and eat fresh croissants",
+    "Banff, Canada 🏔️ – Hike through stunning mountains and crystal lakes",
+    "Santorini, Greece 🏖️ – Watch sunsets over the white-and-blue villages",
+    "Cape Town, South Africa ⛰️ – Visit Table Mountain and penguin beaches",
+    "Queenstown, New Zealand 🚤 – Adventure sports and breathtaking views",
+    "Reykjavik, Iceland ❄️ – Chase the northern lights and soak in hot springs",
+    "Maui, Hawaii 🌺 – Snorkel, surf, and explore the Road to Hana",
+    "Rome, Italy 🍝 – Explore ancient ruins and indulge in delicious pasta",
+    "Barcelona, Spain 🎨 – Discover Gaudí's architecture and vibrant culture",
+    "Dubai, UAE 🏙️ – Skyscrapers, desert safaris, and luxury shopping",
+    "Amsterdam, Netherlands 🚲 – Bike along canals and visit art museums",
+    "Cairo, Egypt 🐫 – Explore the pyramids and sail down the Nile",
+    "Buenos Aires, Argentina 💃 – Tango, steak, and historic streets",
+    "Phuket, Thailand 🐘 – Island hopping, temples, and amazing street food",
+    "Seoul, South Korea 🎎 – K-pop, fashion, and high-tech city life",
+    "Zurich, Switzerland 🧀 – Chocolate, cheese, and snowy alpine peaks",
+    "Tulum, Mexico 🌴 – Cenotes, beach vibes, and Mayan ruins",
+    "Petra, Jordan 🏜️ – Walk through ancient stone-carved wonders"
+    ];
+
+    const display = document.getElementById('vacationDisplay');
+    const button = document.getElementById('generateBtn');
+
+    button.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * vacations.length);
+      display.textContent = vacations[randomIndex];
+      display.style.transform = "scale(1.1)";
+      setTimeout(() => {
+        display.style.transform = "scale(1)";
+      }, 200);
+    });
+  </script>
+
+</body>
+</html>

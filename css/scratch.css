@@ -1,0 +1,82 @@
+p{
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 15px;
+    color: #4a4a4a;
+    line-height: 1.5;
+    margin-bottom: 2px; /* or 0 if you want it super close */
+    
+}
+
+#top{
+    text-decoration: underline;
+    color: rgb(248, 224, 228);
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-style: normal;
+}
+
+/* .emphasizetext{
+    font-weight: bold;
+    
+} */
+
+body{
+    background-color: rgb(248, 224, 228);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+}
+
+.centered-list{
+    padding-left: 0;
+    list-style-position: outside;
+    margin: 0 auto;
+    display: table;
+    text-align: left;
+    font-style: oblique;
+}
+
+.Header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height:100px;
+    line-height: 100px;
+    
+}
+
+nav{
+    text-align: left;
+    background-color: lightgray;
+    padding: 10px;
+    overflow: hidden;
+}
+
+nav a:hover{
+    background-color: #ccc;
+
+}
+
+nav a {
+   
+    color: #333;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.Footer{
+    position:relative;
+    background-color: black;
+    color: rgb(248, 224, 228);
+    bottom: 0px;
+    left: 5px;
+    right: 5px;
+    height: 25px;
+    line-height: 25px;
+    
+}
+
+
